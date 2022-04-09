@@ -37,7 +37,7 @@ const AddUser = () => {
                         id="fullname"
                         className="form-control"
                         placeholder="Enter Fullname"
-                        value={fullname}
+                        // value={fullname}
                         onChange={(e) => dispatch({ type: 'fullname', value: e.target.value })}
                     />
                 </div>
@@ -48,7 +48,7 @@ const AddUser = () => {
                         id="email"
                         className="form-control"
                         placeholder="Enter Email"
-                        value={usermail}
+                        // value={usermail}
                         onChange={(e) => dispatch({ type: 'usermail', value: e.target.value })}
                     />
                 </div>
@@ -59,7 +59,7 @@ const AddUser = () => {
                         id="password"
                         className="form-control"
                         placeholder="Enter Password"
-                        value={userpassword}
+                        // value={userpassword}
                         onChange={(e) => dispatch({ type: 'userpassword', value: e.target.value })}
                     />
                 </div>
@@ -70,7 +70,7 @@ const AddUser = () => {
                         id="phone"
                         className="form-control"
                         placeholder="Enter Phone no."
-                        value={userphone}
+                        // value={userphone}
                         onChange={(e) => dispatch({ type: 'userphone', value: e.target.value })}
                     />
                 </div>

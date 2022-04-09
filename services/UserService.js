@@ -26,10 +26,17 @@ class UserService {
         return await User.find({isDel: false}).select(["-salt", "-hash"])
     }
 
+    async editUser(_id,user){
+        return await User.updateOne({"_id":_id}, {$set: user })
+    }
+
+    async getUserById(_id){
+        return await User.findOne({"_id":_id}).select(["-salt", "-hash"])
+    }
+
     async removeUser(_id){
         return await User.updateOne({"_id":_id}, {$set:{ isDel: true }})
     }
-
 
     
     async loginUser(email, password){

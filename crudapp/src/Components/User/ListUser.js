@@ -22,8 +22,13 @@ const ListUser = () => {
     const {users} = useSelector((state) => state);
     const {email} = useSelector((state) => state);
     console.log(users,email)
+
+    const editUserHandler = (id) => {
+        localStorage.setItem("id",id)
+    }
+
     const deleteUserHandler = (id) => {
-        console.log(id);
+        // console.log(id);
         UserService.deleteUser(id).then((res) => {
            getUserData()
         });
@@ -46,7 +51,7 @@ const ListUser = () => {
                             <td>{user.email}</td>
                             <td>{user.phone}</td>
                             <td>
-                                <Link to={`/edit/${user._id}`} className="btn btn-warning m-1">Edit</Link>
+                                <Link to={`/edit/${user._id}`} className="btn btn-warning m-1"  onClick={() => editUserHandler(user._id)}>Edit</Link>
                                 <button type="button" className="btn btn-danger m-1" onClick={() => deleteUserHandler(user._id)}>Delete</button>
                             </td>
                         </tr>

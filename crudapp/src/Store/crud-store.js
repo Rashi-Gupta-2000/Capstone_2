@@ -10,6 +10,7 @@ const initialState = {
     userpassword:"",
     userphone:"",
     usergender:"Male",
+    id: '',
 };
 
 const crudReducer = (state = initialState,action) => {

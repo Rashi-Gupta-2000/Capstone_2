@@ -25,6 +25,14 @@ class UserService {
         console.log(headers)
         return axios.post(USER_BASE_URL,users,{headers:headers})
     }
+    //update user
+    editUser(id,users){
+        return axios.post(USER_BASE_URL + '/edit/' + id, users,{headers:headers})
+    }
+
+    getById(id){
+        return axios.get(USER_BASE_URL + '/' + id ,{headers:headers})
+    }
 
     //delete user
     deleteUser(id){

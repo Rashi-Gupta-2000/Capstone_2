@@ -17,6 +17,17 @@ router.post("/", auth.required, async (req,res)=>{
     res.send(result)
 })
 
+router.get("/:id", auth.required, async (req,res)=>{
+    const userService = new UserService();
+    const result = await userService.getUserById(req.params.id);
+    res.send(result)
+})
+
+router.post("/edit/:id", async (req,res)=>{
+    const userService = new UserService();
+    const result = await userService.editUser(req.params.id,req.body);
+    res.send(result)
+})
 
 router.post("/login", async (req,res)=>{
     const userService = new UserService();

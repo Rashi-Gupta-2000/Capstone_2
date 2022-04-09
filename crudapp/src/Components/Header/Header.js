@@ -13,9 +13,9 @@ const Header = () => {
                     <li className="navbar-item">
                         <Link to="/create" className="nav-link">Create User</Link>
                     </li>
-                    <li className="navbar-item">
+                    {/* <li className="navbar-item">
                         <Link to={`/edit/${params}`} className="nav-link">Edit User</Link>
-                    </li>
+                    </li> */}
             </ul>
             </div>
         </nav>
